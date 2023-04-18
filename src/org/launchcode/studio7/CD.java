@@ -9,9 +9,17 @@ public class CD extends BaesDisc  implements OpticalDisc{
     // TODO: Determine which fields, methods, and constructors can be extended from the base class and which ones
     //  need to be declared separately.
 
-    protected CD(String genre, String title, String author, String discType, int speed, int capacity) {
+    protected CD(String genre, String title, String author, String discType) {
         super(title, author, discType);
         this.genre = genre;
+    }
+
+    @Override
+    public String toString() {
+        return "\n" + this.getDiscType() + ":" +
+                "\nTitle: " + this.getTitle() +
+                "\nArtists: " + this.getAuthor()  +
+                "\nDiscType: " + this.getDiscType();
     }
 
     @Override
